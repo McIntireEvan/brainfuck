@@ -1,5 +1,6 @@
 function interpret(code) {
     var data = [];
+    var buffer = '';
     var pointer = 0;
 
     for (var i = 0; i < code.length; i++) {
@@ -25,7 +26,7 @@ function interpret(code) {
                 break;
             //TODO: Write an output buffer and an input buffer
             case '.':
-                console.log(String.fromCharCode(data[pointer]))
+                buffer += String.fromCharCode(data[pointer]);
                 break;
             case ',':
                 data[pointer] = prompt().charCodeAt(0);
@@ -52,5 +53,6 @@ function interpret(code) {
                 }
                 break;
         }
-    } 
+    }
+    return buffer;
 }
