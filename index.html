@@ -8,7 +8,7 @@
         <script>
             $(document).ready(function () {
                 $('#interpret').click(function () {
-                    interpret($('#code').val());
+                    $('#output').html(interpret($('#code').val()).replace(/\n/g, "<br />"));
                 });
             });
         </script>
@@ -16,5 +16,6 @@
     <body>
         Code: <textarea id='code'></textarea><br/>
         <button id="interpret">Interpret</button><br />
+        <div id='output'></div>
     </body>
 </html>
