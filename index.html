@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Brainfuck Interpreter</title>
+        <script src="interpreter.js"></script>
+        <script src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
+        <script>
+            $(document).ready(function () {
+                $('#interpret').click(function () {
+                    interpret($('#code').val());
+                });
+            });
+        </script>
+    </head>
+    <body>
+        Code: <textarea id='code'></textarea><br/>
+        <button id="interpret">Interpret</button><br />
+    </body>
+</html>
